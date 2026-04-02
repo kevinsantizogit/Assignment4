@@ -1,0 +1,10 @@
+{"drugs": [{"id":"1","drug_company":"Jets, Sets, & Elephants Beauty Corp.","drug_name":"Antibacterial Hand Towelettes","fda_ndc_code":"50988-250"},
+{"id":"2","drug_company":"Teva Pharmaceuticals USA Inc","drug_name":"Zolpidem Tartrate","fda_ndc_code":"0093-0074"},
+{"id":"3","drug_company":"Caraco Pharmaceutical Laboratories, Ltd.","drug_name":"HydrOXYzine hydrochloride","fda_ndc_code":"57664-113"},
+{"id":"4","drug_company":"Tarte Inc","drug_name":"ReCreate Foundation","fda_ndc_code":"51060-008"},
+{"id":"5","drug_company":"ORIGINS NATURAL RESOURCES INC.","drug_name":"SPOT REMOVER ACNE TREATMENT PADS","fda_ndc_code":"59427-110"},
+{"id":"6","drug_company":"Nelco Laboratories, Inc.","drug_name":"Sisal","fda_ndc_code":"36987-2261"},
+{"id":"7","drug_company":"Lake Erie Medical DBA Quality Care Products LLC","drug_name":"Levocetirizine Dihydrochloride","fda_ndc_code":"35356-784"},
+{"id":"8","drug_company":"Portal Pharmaceutical","drug_name":"Clophed","fda_ndc_code":"49963-630"},
+{"id":"9","drug_company":"Topco Associates LLC","drug_name":"Topcare Ibuprofen","fda_ndc_code":"36800-183"},
+{"id":"10","drug_company":"Neutrogena Corporation","drug_name":"Neutrogena Healthy Skin Brightening Eye Perfector","fda_ndc_code":"10812-459"}]}
