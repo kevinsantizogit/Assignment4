@@ -1,4 +1,4 @@
-// This function fetches all drugs from the json-server API
+// this function fetches all drugs from the json-server API
 async function getDrugs() {
   const response = await fetch("http://localhost:4000/drugs", {
     cache: "no-store",
@@ -11,7 +11,7 @@ async function getDrugs() {
   return response.json();
 }
 
-// This page shows all drugs in a server-rendered table
+// this page shows all drugs in a server-rendered table
 import Link from "next/link";
 import styles from "./page.module.css";
 

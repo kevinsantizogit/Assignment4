@@ -1,0 +1,23 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.title {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+}
+
+.subtitle {
+  margin: 0 0 24px 0;
+  color: #4b5563;
+}
