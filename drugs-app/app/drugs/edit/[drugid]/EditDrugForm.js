@@ -7,9 +7,36 @@ export default function EditDrugForm({ drug }) {
   const [drugCompany, setDrugCompany] = useState(drug.drug_company);
   const [drugName, setDrugName] = useState(drug.drug_name);
   const [fdaNdcCode, setFdaNdcCode] = useState(drug.fda_ndc_code);
+  const [errors, setErrors] = useState({});
+
+function validateForm() {
+  const newErrors = {};
+  if (drugName.trim().length <= 3) {
+    newErrors.drug_name = "Drug name must be longer than 3 characters.";
+  }
+  if (drugCompany.trim().length <= 4) {
+    newErrors.drug_company = "Drug company must be longer than 4 characters.";
+  }
+  if (!/^[0-9-]+$/.test(fdaNdcCode.trim())) {
+    newErrors.fda_ndc_code = "FDA NDC code can only contain digits and dashes.";
+  }
+  return newErrors;
+}
+
+function handleSubmit(event) {
+  const validationErrors = validateForm();
+  if (Object.keys(validationErrors).length > 0) {
+    event.preventDefault();
+    setErrors(validationErrors);
+    return;
+  }
+  setErrors({});
+}
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
+      <input type="hidden" name="id" value={drug.id} />
+      
       <div style={{ marginBottom: "16px" }}>
         <label
           htmlFor="drug_company"
@@ -30,6 +57,11 @@ export default function EditDrugForm({ drug }) {
             borderRadius: "8px",
           }}
         />
+        {errors.drug_company && (
+          <p style={{ color: "#dc2626", marginTop: "6px" }}>
+            {errors.drug_company}
+          </p>
+        )}        
       </div>
 
       <div style={{ marginBottom: "16px" }}>
@@ -52,6 +84,11 @@ export default function EditDrugForm({ drug }) {
             borderRadius: "8px",
           }}
         />
+        {errors.drug_name && (
+          <p style={{ color: "#dc2626", marginTop: "6px" }}>
+            {errors.drug_name}
+          </p>
+        )}
       </div>
 
       <div style={{ marginBottom: "20px" }}>
@@ -74,6 +111,11 @@ export default function EditDrugForm({ drug }) {
             borderRadius: "8px",
           }}
         />
+        {errors.fda_ndc_code && (
+          <p style={{ color: "#dc2626", marginTop: "6px" }}>
+            {errors.fda_ndc_code}
+          </p>
+        )}
       </div>
 
       <button
